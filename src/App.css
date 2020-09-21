@@ -1,38 +1,191 @@
-.App {
-  text-align: center;
+/* Map */
+
+.map-wrap {
+    position: relative;
+    border: 1px solid var(--accent);
+    border-radius: 3px;
+    overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.map-states path:hover {
+    fill: var(--map-hover);
+    cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.map-wrap svg {
+    transform: scale(1.2);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.map-states.clicked {
+    fill: var(--map-active);
 }
 
-.App-link {
-  color: #61dafb;
+/* Pie chart */
+
+.pie-chart-wrap p {
+    font-size: 24px;
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Filter */
+
+.filter-sex fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-sex fieldset span, .filter-sex fieldset input {
+    margin-right: 5px;
+}
+
+.filter-sex fieldset span:nth-child(3) {
+    margin-left: 10px;
+}
+
+.filter p {
+    padding-top: 15px;
+}
+
+.filter select {
+    width: 100%;
+}
+
+/* Info box */
+
+.info-box {
+    position: absolute;
+    padding: 10px;
+    border-radius: 3px;
+    background: #e6e6e6;
+    border: 1px solid #000000;
+    margin: 20px;
+    width: 330px;
+    z-index: 999;
+}
+
+/* Color map */
+
+.color-map > p {
+    font-size: 24px;
+    text-align: center;
+    display: inline-block;
+}
+
+.color-map li {
+    margin: 10px;
+}
+
+.color-map-icon {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+
+.color-map-text {
+    margin-left: 5px;
+}
+
+/* Grands list */
+.grands-list-wrap {
+    margin-top: 25px;
+}
+
+.grands-list-wrap p {
+    text-align: center;
+    font-size: 18px;
+    padding: 20px 0;
+    background: #e6e6e6;
+    margin-bottom: 0;
+}
+
+.grands-list {
+    border: 1px solid #c1c1c1;
+}
+
+.grands-list ul {
+    height: 375px;
+}
+
+.grands-list ul {
+    position: relative;
+}
+
+.grands-list ul .title,
+.grands-list ul .message {
+    text-align: center;
+    padding: 10px;
+    background: var(--map-active);
+    color: white;
+}
+
+.grands-list ul li button {
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    border: none;
+    padding: 10px;
+    width: 100%;
+}
+
+.grands-list .empty {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background: #990033;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+}
+
+.grands-list .active {
+    background: var(--map-active);
+    color: white;
+}
+
+.grands-list ul li button:hover {
+    background: var(--map-hover);
+    color: white;
+}
+
+.grands-list ul li button span {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+/* Grant info box */
+
+.grant-box {
+    padding: 10px;
+    box-shadow: 0 -15px 20px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.grant-box a {
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 3px;
+    background: var(--map-active);
+    color: white;
+    font-size: 16px;
+}
+
+.grant-box a:hover {
+    background: var(--map-hover);
+}
+.grant-box .reward-col {
+    border-left: 1px solid var(--map-active);
+}
+
+.reward-col p:first-child {
+    font-size: 18px;
+}
+
+.grant-box .reward {
+    font-weight: bold;
+    font-size: 22px;
 }
